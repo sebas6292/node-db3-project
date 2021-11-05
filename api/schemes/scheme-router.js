@@ -129,7 +129,10 @@ router.post('/', validateScheme, (req, res, next) => {
     }
   ]
 */
-router.post('/:scheme_id/steps', checkSchemeId, validateStep, (req, res, next) => {
+router.post('/:scheme_id/steps',
+ checkSchemeId, 
+ validateStep, 
+ (req, res, next) => {
   const step = req.body
   const { scheme_id } = req.params
 
